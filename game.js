@@ -131,12 +131,14 @@ function update ()
     if (cursors.left.isDown)
     {
         player.setVelocityX(-160);
+        if (cursors.down.isDown) { player.setVelocityX(-320) }; // ускорение героя
 
         player.anims.play('left', true);
     }
     else if (cursors.right.isDown)
     {
         player.setVelocityX(160);
+        if (cursors.down.isDown) { player.setVelocityX(320) }; // ускорение героя
 
         player.anims.play('right', true);
     }
