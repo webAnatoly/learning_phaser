@@ -1,5 +1,5 @@
 
-console.log('works');
+console.log('it works');
 var config = {
     type: Phaser.AUTO,
     width: 980,
