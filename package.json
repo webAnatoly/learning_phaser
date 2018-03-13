@@ -3,19 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "http-server": "http-server"
   },
   "author": "",
   "license": "ISC",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/webAnatoly/phasergame.git"
   },
-
   "engine": {
     "node": "*",
     "npm": "*"
