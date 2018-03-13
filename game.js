@@ -2,8 +2,8 @@
 console.log('it works');
 var config = {
     type: Phaser.AUTO,
-    width: 980,
-    height: 1520,
+    width: 800,
+    height: 600,
     physics: {
       default: 'arcade',
       arcade: {
@@ -45,21 +45,20 @@ function preload () {
 function create () {
 
   //  A simple background for our game
-  this.add.image(490, 760, 'sky');
+  this.add.image(400, 300, 'sky');
 
   //  The platforms group contains the ground and the 2 ledges we can jump on
   platforms = this.physics.add.staticGroup(); 
 
   //  Here we create the ground.
   //  Scale it to fit the width of the game (the original sprite is 400x32 in siz
-  platforms.create(490, 1500, 'ground').setScale(3).refreshBody();
+  platforms.create(400, 580, 'ground').setScale(2).refreshBody();
 
   //  Now let's create some ledges
-  platforms.create(350, 800, 'ground');
-  platforms.create(200, 500, 'ground');
-  platforms.create(850, 240, 'ground');
-  platforms.create(950, 1040, 'ground');
-  platforms.create(70, 1240, 'ground');
+  platforms.create(350, 300, 'ground');
+  platforms.create(50, 400, 'ground');
+  platforms.create(850, 140, 'ground');
+  platforms.create(70, 100, 'ground');
 
   // The player and its settings
   player = this.physics.add.sprite(100, 450, 'dude');
@@ -153,8 +152,9 @@ function update ()
         player.setVelocityY(-330);
     }
     if (cursors.space.isDown && player.body.touching.down) {
-      player.setVelocityY(-550);
+      player.setVelocityY(-440);
     }
+
 }
 
 function collectStar (player, star)
