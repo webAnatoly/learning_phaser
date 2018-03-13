@@ -10,7 +10,12 @@
   },
   "author": "",
   "license": "ISC",
-  
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webAnatoly/phasergame.git"
+  },
+
   "engine": {
     "node": "*",
     "npm": "*"
